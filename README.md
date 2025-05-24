@@ -1,51 +1,76 @@
-# Introduction to GitHub
+# Quiz Game
 
-_Get started using GitHub in less than an hour._
+A simple C++ console application that lets you play a multiple-choice quiz game. Test your knowledge (or your knowledge of the author's favorites!) and get your score at the end.
 
-## Welcome
+## Features
 
-People use GitHub to build some of the most advanced technologies in the world. Whether you’re visualizing data or building a new game, there’s a whole community and set of tools on GitHub that can help you do it even better. GitHub Skills’ “Introduction to GitHub” exercise guides you through everything you need to start contributing in less than an hour.
+- Four multiple-choice quiz questions
+- Instant feedback on each answer
+- Final score and performance summary after the quiz
+- User-friendly command-line interface
 
-- **Who is this for**: New developers, new GitHub users, and students.
-- **What you'll learn**: We'll introduce repositories, branches, commits, and pull requests.
-- **What you'll build**: We'll make a short Markdown file you can use as your [profile README](https://docs.github.com/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme).
-- **Prerequisites**: None. This exercise is a great introduction for your first day on GitHub.
-- **How long**: This exercise takes less than one hour to complete.
+## Installation
 
-In this exercise, you will:
+### 1. Clone the repository
+```sh
+git clone https://github.com/XingChen47/Quiz-Game.git
+cd Quiz-Game
+```
 
-1. Create a branch
-2. Commit a file
-3. Open a pull request
-4. Merge your pull request
+### 2. Compile the program
 
-### How to start this exercise
+#### **Linux/macOS**
+```sh
+g++ -o quiz_game "Quiz Game.cpp"
+```
 
-1. Right-click **Copy Exercise** and open the link in a new tab.
+#### **Windows (using MinGW)**
+```sh
+g++ -o quiz_game.exe "Quiz Game.cpp"
+```
+*Make sure `g++` is available in your PATH.*
 
-   <a id="copy-exercise">
-      <img src="https://img.shields.io/badge/📠_Copy_Exercise-AAA" height="25pt"/>
-   </a>
+## Usage
 
-2. In the new tab, most of the prompts will automatically fill in for you.
-   - For owner, choose your personal account or an organization to host the repository.
-   - We recommend creating a public repository, as private repositories will [use Actions minutes](https://docs.github.chttps://github.com/XingChen47/Supporting-document/billing/managing-billing-for-github-actions/about-billing-for-github-actions).
-   - Scroll down and click the **Create repository** button at the bottom of the form.
+Run the compiled program from your terminal:
 
-3. After your new repository is created, wait about 20 seconds for the exercise to be prepared and buttons updated. You will continue working from your copy of the exercise.
-   - The **Copy Exercise** button will deactivate, changing to gray.
-   - The **Start Exercise** button will activate, changing to green.
-   - You will likely need to refresh the page.
+**Linux/macOS:**
+```sh
+./quiz_game
+```
 
-4. Click **Start Exercise**. Follow the step-by-step instructions and feedback will be provided as you progress.
+**Windows:**
+```sh
+quiz_game.exe
+```
 
-   <a id="start-exercise" href="https://github.com/XingChen47/Supporting-document/issues/1">
-      <img src="https://img.shields.io/badge/🚀_Start_Exercise-008000" height="25pt"/>
-   </a>
+You will be presented with each question and four possible answers (A, B, C, D). Enter your choice for each question. Your score and the correct answers will be shown at the end.
 
-> [!IMPORTANT]
-> The **Start Exercise** button will activate after copying the repository. You will probably need to refresh the page.
+**Example Output:**
+```
+WELCOME TO MY QUIZ GAME!
+***************************************
+1. Which is my favourite football club? 
+***************************************
+A. Real Madrid
+B. Barcelona
+C. Man City
+D. Man United
+c
+***************************************
+You are correct!
+...
+***************************************
+*                 RESULTS                 *
+***************************************
+CORRECT GUESSES: 3
+TOTAL NUMBER OF QNS: 4
+SCORE 75%
+```
 
----
+## Customization
+
+You can easily add your own questions and answers by editing the `questions`, `options`, and `answerKey` arrays in the source code.
+
 
 &copy; 2025 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
